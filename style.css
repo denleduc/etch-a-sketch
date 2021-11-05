@@ -2,12 +2,21 @@
 
 * {
   font-family: 'Quicksand', sans-serif;
+  color: white
 }
 
 body {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin: 0;
+  height: 100vh;
+  background-color: #2c2f33;
+}
+
+.page-content {
+  display: flex;
+  flex: 1 0 auto;
 }
 
 .grid-container {
@@ -18,8 +27,14 @@ body {
   height: 500px;
   display: grid;
   box-shadow: 10px 10px 35px 0px rgba(0,0,0,0.75);
+  background-color: #FFF;
 }
 
+.footer {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
 .black {
   background-color: #000;
 }
