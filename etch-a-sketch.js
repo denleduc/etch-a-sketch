@@ -11,6 +11,22 @@ function clearGrid() {
   })
 }
 
+function askSize() {
+  gridSize = Number(prompt('How detailed would you like the grid to be ?'));
+  console.log(gridSize);
+  if (isNaN(gridSize)) {
+    gridSize = 64;
+    alert('You didn\'t enter a number. Using default grid size: 64x64');
+  } else if (gridSize > 100) {
+    gridSize = 100;
+  } else if (gridSize < 1) {
+    gridSize = 1;
+  }
+
+  console.log(gridSize)
+  createGrid(gridSize);
+}
+
 function createGrid(gridSize) {
   if (gridCreated) {
     while (gridContainer.firstChild) {

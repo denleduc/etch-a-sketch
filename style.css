@@ -17,14 +17,15 @@ body {
 
 .grid {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   overflow: auto;
   flex: 1 0 auto;
 }
 
 .grid-container {
   align-self: center;
+  flex-shrink: 0;
   overflow: auto;
   width: 500px;
   height: 500px;
