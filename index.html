@@ -6,21 +6,22 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-
-    <div class="grid">
+    <div class="header">
+      <h1>Etch-a-sketch</h1>
+      <h2>Take a moment to draw!</h2>
+    </div>
+    <div class="content">
       <div class="grid-container">
-        <!-- Using JS to add the grids here -->
+        <!-- Using JS to add divs-->
       </div>
       <div class="controls">
-        <button class="btn" onclick="askSize()">Change grid size</button>
-        <button class="btn" onclick="clearGrid()">Clear</button>
+        <button class="btn" onclick="clearGrid()">Clear grid</button>
+        <button class="btn" onclick="askSize()">New grid</button>
       </div>
     </div>
-    
     <div class="footer">
       <p>© Denis L. 2021</p>
     </div>
     <script src="etch-a-sketch.js" charset="utf-8" defer></script>
-    
-  </body>
+    </body>
 </html>
