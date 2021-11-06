@@ -1,19 +1,35 @@
 const gridContainer = document.querySelector('.grid-container');
+const clearGridBtn = document.querySelector('.clear-grid-btn');
+const newGridBtn = document.querySelector('.new-grid-btn');
 let gridSize = 64;
 let gridCreated;
 let pixels = undefined;
+
+clearGridBtn.addEventListener('click', () => {
+  clearGrid();
+});
+
+newGridBtn.addEventListener('click', () => {
+  askSize();
+});
 
 createGrid(gridSize);
 
 function clearGrid() {
   pixels.forEach(pixel => {
     pixel.classList.remove('black');
-  })
+  });
+}
+
+function deleteGrid() {
+  while (gridContainer.firstChild) {
+    gridContainer.removeChild(gridContainer.firstChild);
+  }
+  gridCreated = false;
 }
 
 function askSize() {
-  gridSize = Number(prompt('How large would you like the grid to be ?'));
-  console.log(gridSize);
+  gridSize = Number(prompt('How large would you like the grid to be ? (Enter a value between 1 and 100.)'));
   if (isNaN(gridSize)) {
     gridSize = 64;
     alert('You didn\'t enter a number. Using default grid size: 64x64');
@@ -23,19 +39,15 @@ function askSize() {
     gridSize = 1;
   }
 
-  console.log(gridSize)
   createGrid(gridSize);
 }
 
 function createGrid(gridSize) {
   if (gridCreated) {
-    while (gridContainer.firstChild) {
-      gridContainer.removeChild(gridContainer.firstChild);
-    }
-    gridCreated = false;
+    deleteGrid();
   }
 
-  for (i=0;i< gridSize * gridSize;i++) {
+  for (i = 0; i < gridSize * gridSize; i++) {
     let divSquare = gridContainer.appendChild(document.createElement('div'));
     divSquare.classList.add('pixel');
   }
