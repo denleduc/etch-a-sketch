@@ -12,7 +12,7 @@ function clearGrid() {
 }
 
 function askSize() {
-  gridSize = Number(prompt('How detailed would you like the grid to be ?'));
+  gridSize = Number(prompt('How large would you like the grid to be ?'));
   console.log(gridSize);
   if (isNaN(gridSize)) {
     gridSize = 64;
