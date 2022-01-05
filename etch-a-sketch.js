@@ -1,9 +1,12 @@
 const gridContainer = document.querySelector('.grid-container');
 const clearGridBtn = document.querySelector('.clear-grid-btn');
 const newGridBtn = document.querySelector('.new-grid-btn');
+const randomColorBtn = document.querySelector('.random-color-btn');
+const colorInput = document.querySelector('#colorSel');
 let gridSize = 64;
 let gridCreated;
 let pixels = undefined;
+let isRandomColor = false;
 
 clearGridBtn.addEventListener('click', () => {
   clearGrid();
@@ -13,11 +16,18 @@ newGridBtn.addEventListener('click', () => {
   askSize();
 });
 
+randomColorBtn.addEventListener('click', () => {
+  randomColorBtn.classList.toggle('enabled');
+  isRandomColor = !isRandomColor;
+});
+
 createGrid(gridSize);
+
+const getRandomColor = () => '#'+Math.floor(Math.random()*16777215).toString(16); 
 
 function clearGrid() {
   pixels.forEach(pixel => {
-    pixel.classList.remove('black');
+    pixel.style.backgroundColor = "#FFFFFF";
   });
 }
 
@@ -58,7 +68,12 @@ function createGrid(gridSize) {
   pixels = document.querySelectorAll('.pixel');
   pixels.forEach(pixel => {
     pixel.addEventListener('mouseover', () => {
-      pixel.classList.add('black');
+      if (isRandomColor) {
+        pixel.style.backgroundColor = getRandomColor();
+      }
+      else {
+        pixel.style.backgroundColor = colorInput.value; //`${color}`;
+      }
     });
   });
   gridCreated = true;
