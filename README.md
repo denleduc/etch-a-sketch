@@ -1,5 +1,5 @@
 # etch-a-sketch
-A Etch-a-sketch app in JS while following The Odin Project.
+A Etch-a-sketch app made using JS while following The Odin Project.
 It has several features including: 
 - using a user-defined color
 - using a random color for each pixel
