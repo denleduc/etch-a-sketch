@@ -5,7 +5,7 @@ It has several features including:
 - using a random color for each pixel
 - user-set grid size
 
-It isn't responsive yet.
+It is responsive (even if it has been designed to be used on a computer).
 This project's purpose was to practice CSS, notably flexbox and grid, while learning DOM Manipulation using JavaScript.
 
 Live: [Etch a sketch on GitHub Pages](https://bussun.github.io/etch-a-sketch)
