@@ -8,7 +8,7 @@ It has several features including:
 It is responsive (even if it has been designed to be used on a computer).
 This project's purpose was to practice CSS, notably flexbox and grid, while learning DOM Manipulation using JavaScript.
 
-Live: [Etch a sketch on GitHub Pages](https://bussun.github.io/etch-a-sketch)
+Live: [Etch a sketch on my website](https://bussun.dev/projects/etch-a-sketch)
 ## Screenshot:
 
 ![App screenshot](./screenshot.png)
