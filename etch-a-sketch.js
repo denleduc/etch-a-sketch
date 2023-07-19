@@ -91,8 +91,4 @@ const UI = (() => {
   return {askSize, clear}
 })();
 
-const png = (() => {
-  
-})();
-
 grid.create();
